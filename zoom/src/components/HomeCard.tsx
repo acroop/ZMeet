@@ -15,7 +15,7 @@ function HomeCard({className, title, description, img, handleClick}: HomeCardPro
   return (
     <>
     <div
-    className={cn(' bg-orange-600 px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer', className)}
+    className={cn(' bg-orange-600 px-4 py-6 flex flex-col justify-between w-full  min-h-[260px] rounded-[14px] cursor-pointer', className)}
      onClick={handleClick}
      >
         <div className='flex-center glassmorphism size-12 rounded-[12px]'>
@@ -28,11 +28,11 @@ function HomeCard({className, title, description, img, handleClick}: HomeCardPro
             />
         </div>
 
-        <div className='flex flex-col gap-2'>
-            <h1 className=' text-2xl font-bold'>
+        <div className='flex flex-col gap-2 items-center justify-center'>
+            <h1 className=' text-3xl font-bold'>
                 {title}
             </h1>
-            <p className=' text-lg text-white/80'>{description}</p>
+            <p className=' text-2xl text-white/80'>{description}</p>
         </div>
     </div>
     

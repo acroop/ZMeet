@@ -82,7 +82,7 @@ function MeetingTypes() {
 
     return (
         <section
-            className=' grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'
+            className=' grid grid-cols-1 gap-9 md:grid-cols-2 xl:grid-cols-2'
         >
             <HomeCard
                 img="/icons/add-meeting.svg"
@@ -128,6 +128,7 @@ function MeetingTypes() {
                         <div className="grid w-full gap-1.5">
                             <Label htmlFor="message">Add Time</Label>
                             <ReactDatePicker
+                                
                                 selected={values.dateWithTime}
                                 onChange={(date) => setValues({ ...values, dateWithTime: date! })}
                                 showTimeSelect

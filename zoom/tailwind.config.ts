@@ -20,11 +20,11 @@ const config = {
     extend: {
       colors: {
         dark:{
-          1: "#1C1F2E",
-          2: "#161925"
+          1: "#121212",
+          2: "#000000"
         },
         blue:{
-          1: "#0E78F9"
+          1: "#620dd9"
         },
         sky:{
           1: "#C9DDFF"
@@ -64,7 +64,11 @@ const config = {
         },
       },
       backgroundImage:{
-        hero: "url('/images/hero-background.png')"
+        hero1: "url('/images/hero-background1.png')",
+        hero2: "url('/images/hero-background2.png')",
+        hero3: "url('/images/hero-background3.png')",
+        hero4: "url('/images/hero-background4.png')",
+        hero5: "url('/images/hero-background5.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
