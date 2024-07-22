@@ -11,6 +11,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import ReactDatePicker from 'react-datepicker';
+import { Input } from "@/components/ui/input"
 
 function MeetingTypes() {
     const router = useRouter()
@@ -148,7 +149,7 @@ function MeetingTypes() {
 
                         handleClick={() => {
                             navigator.clipboard.writeText(meetingLink)
-                            toast({title: 'Link Copied'})
+                            toast({ title: 'Link Copied' })
                         }}
                         image='/icons/checked.svg'
                         buttonIcon='/icons/copy.svg'
@@ -164,6 +165,24 @@ function MeetingTypes() {
                 buttonText="Start Meeting"
                 handleClick={createMeeting}
             />
+
+
+            <MeetingModal
+                isOpen={meetingState === 'isJoiningMeeting'}
+                onClose={() => setMeetingState(undefined)}
+                title="Type The Link Here"
+                className="text-center"
+                buttonText="Join Meeting"
+                handleClick={() => router.push(values.link)}
+            >
+                <Input 
+                placeholder='Enter link'
+                className=' border-none bg-dark-2 focus-visible:ring-0 focus-visible:ring-offset-0'
+                onChange={(e) => {
+                    setValues({ ...values, link: e.target.value })
+                }} 
+                />
+            </MeetingModal>
         </section>
     )
 }
