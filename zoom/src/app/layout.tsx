@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Meet Clone",
+  title: "ZMeet",
   description: "Meeting app",
   icons: {
     icon: "/icons/logo.svg",

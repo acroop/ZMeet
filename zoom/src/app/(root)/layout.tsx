@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import React, { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: "Meet Clone",
+  title: "ZMeet",
   description: "Meeting app",
   icons: {
     icon: "/icons/logo.svg",
